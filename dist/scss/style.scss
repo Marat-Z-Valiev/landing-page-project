@@ -1,0 +1,10 @@
+// @import "./_cssReset.scss";
+@import "./colors";
+@import "./header";
+@import "./intro";
+
+body {
+	font-size: 1rem;
+	font-family: "Rubik", sans-serif;
+	font-weight: 500;
+}

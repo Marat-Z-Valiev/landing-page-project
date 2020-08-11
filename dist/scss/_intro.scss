@@ -1,0 +1,140 @@
+.intro {
+	display: flex;
+	padding: 50px;
+
+	.intro-text {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 500px;
+		margin-right: 210px;
+	}
+
+	.buttons {
+		display: flex;
+		gap: 20px;
+
+		button {
+			font-size: 1rem;
+			font-weight: 600;
+			border-radius: 10px;
+			border: none;
+			height: 60px;
+			width: 380px;
+		}
+		.chrome {
+			@extend button;
+			background-color: $softBlue;
+			color: $white;
+
+			&:hover {
+				background-color: transparent;
+				color: $softBlue;
+				cursor: pointer;
+				border: $softBlue 2px solid;
+			}
+		}
+
+		.firefox {
+			@extend button;
+			background-color: $grayishBlue;
+			color: $white;
+
+			&:hover {
+				background-color: transparent;
+				color: $grayishBlue;
+				cursor: pointer;
+				border: $grayishBlue 2px solid;
+			}
+		}
+	}
+
+	.intro-image {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: 50px;
+
+		img {
+			position: absolute;
+			bottom: 60px;
+			right: 20px;
+			z-index: 5;
+		}
+
+		.background {
+			background-color: $softBlue;
+			position: relative;
+			bottom: 50px;
+			height: 400px;
+			width: 550px;
+			border-radius: 136px 0 0 200px;
+			margin-right: -55px;
+			margin-top: 50px;
+		}
+	}
+}
+
+// Media queries
+@media (max-width: 465px) {
+	.intro {
+		flex-direction: column-reverse;
+
+		.buttons {
+			gap: 10px;
+		}
+
+		.intro-text {
+			margin-right: 0;
+		}
+		.intro-image .background {
+			height: 200px;
+			right: 0;
+			left: 60px;
+			margin-right: 0;
+		}
+		.intro-image img {
+			width: 120%;
+			bottom: 40px;
+			right: 0;
+		}
+	}
+}
+
+@media (min-width: 466px) and (max-width: 768px) {
+	.intro {
+		flex-direction: column-reverse;
+		.buttons {
+			gap: 10px;
+
+			button {
+				width: 150px;
+				height: 50px;
+			}
+		}
+
+		.intro-image {
+			top: 55px;
+
+			img {
+				width: 80%;
+			}
+
+			.background {
+				left: 100px;
+				width: 500px;
+				height: 300px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.intro {
+		.intro-image {
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+		}
+	}
+}
