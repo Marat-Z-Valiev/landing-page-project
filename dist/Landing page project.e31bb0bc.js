@@ -121,7 +121,54 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 var hamburgerButton = document.querySelector("#hamburger-button");
 var closeButton = document.querySelector("#close-menu");
 var mobileMenu = document.querySelector(".nav-menu");
-var logo = document.querySelector(".logo");
+var logo = document.querySelector(".logo"); // Tabs
+
+var tabs = document.querySelectorAll(".tab");
+var tabsContentContainer = document.querySelector(".features-section");
+tabs.forEach(function (tab) {
+  tab.addEventListener("click", function () {
+    var tabNumber = tab.dataset.forTab;
+    var tabToActivate = tabsContentContainer.querySelector(".tab-content[data-tab=\"".concat(tabNumber, "\"]"));
+    tabs.forEach(function (tab) {
+      tab.classList.remove("tab-active");
+    });
+    tabsContentContainer.querySelectorAll(".tab-content").forEach(function (tabContent) {
+      tabContent.classList.remove("tabs-content-active");
+    });
+    tab.classList.add("tab-active");
+    tabToActivate.classList.add("tabs-content-active");
+  });
+}); // const tab1 = document.querySelector(".tab1");
+// const tab2 = document.querySelector(".tab2");
+// const tab3 = document.querySelector(".tab3");
+// const simpleBookingTab = document.getElementById("simple-bookmarking");
+// const speedySearchTab = document.getElementById("speedy-searching");
+// const easySharingTab = document.getElementById("easy-sharing");
+// tab1.addEventListener("click", () => {
+// 	tab1.classList.add("active");
+// 	tab2.classList.remove("active");
+// 	tab3.classList.remove("active");
+// 	simpleBookingTab.classList.toggle("show");
+// 	speedySearchTab.classList.toggle("show");
+// 	easySharingTab.classList.toggle("show");
+// });
+// tab2.addEventListener("click", () => {
+// 	tab2.classList.add("active");
+// 	tab1.classList.remove("active");
+// 	tab3.classList.remove("active");
+// 	simpleBookingTab.classList.toggle("show");
+// 	speedySearchTab.classList.toggle("show");
+// 	easySharingTab.classList.toggle("show");
+// });
+// tab3.addEventListener("click", () => {
+// 	tab3.classList.add("active");
+// 	tab1.classList.remove("active");
+// 	tab3.classList.remove("active");
+// 	simpleBookingTab.classList.toggle("show");
+// 	speedySearchTab.classList.toggle("show");
+// 	easySharingTab.classList.toggle("show");
+// });
+
 hamburgerButton.addEventListener("click", function () {
   mobileMenu.classList.toggle("open");
   logo.classList.toggle("hide");
@@ -158,7 +205,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58513" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49770" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

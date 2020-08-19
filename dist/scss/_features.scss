@@ -1,0 +1,95 @@
+.features {
+	h2 {
+		text-align: center;
+	}
+
+	.features-info {
+		text-align: center;
+		width: 500px;
+		margin: 0 auto;
+	}
+
+	.tabs {
+		display: flex;
+		justify-content: center;
+		margin-top: 50px;
+
+		.tab {
+			border-bottom: solid 2px $grayishBlue;
+			text-align: center;
+			padding: 20px;
+
+			&:hover {
+				color: $softRed;
+				cursor: pointer;
+			}
+		}
+
+		.tab-active {
+			border-bottom: solid 4px $softRed;
+		}
+	}
+
+	.features-section {
+		.tab-content {
+			display: flex;
+			margin-top: 50px;
+
+			.image {
+				img {
+					position: absolute;
+					left: 155px;
+					z-index: 5;
+				}
+				.background {
+					background-color: $softBlue;
+					height: 400px;
+					width: 550px;
+					border-radius: 0 136px 200px 0;
+					margin-top: 50px;
+				}
+			}
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			margin-left: 200px;
+			width: 100%;
+
+			h2 {
+				text-align: left;
+			}
+
+			.info-text {
+				text-align: left;
+				width: 550px;
+			}
+
+			.info-button {
+				font-size: 1rem;
+				font-weight: 600;
+				border-radius: 5px;
+				border: none;
+				height: 50px;
+				width: 120px;
+				background-color: $softBlue;
+				color: $white;
+
+				&:hover {
+					background-color: transparent;
+					color: $softBlue;
+					cursor: pointer;
+					border: $softBlue 2px solid;
+				}
+			}
+		}
+		.tab-content {
+			display: none;
+		}
+
+		.tabs-content-active {
+			display: flex;
+		}
+	}
+}
