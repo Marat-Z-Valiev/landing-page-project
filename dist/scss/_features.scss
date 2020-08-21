@@ -93,3 +93,20 @@
 		}
 	}
 }
+
+@include mobile {
+	.features {
+		.features-info {
+			width: auto;
+		}
+	}
+	.tabs {
+		flex-direction: column;
+	}
+
+	.features-section {
+		img {
+			width: 100%;
+		}
+	}
+}

@@ -4,6 +4,7 @@ const mobileMenu = document.querySelector(".nav-menu");
 const logo = document.querySelector(".logo");
 
 // Tabs
+const tabsContainer = document.querySelector(".tabs");
 const tabs = document.querySelectorAll(".tab");
 const tabsContentContainer = document.querySelector(".features-section");
 
@@ -29,39 +30,8 @@ tabs.forEach((tab) => {
 	});
 });
 
-// const tab1 = document.querySelector(".tab1");
-// const tab2 = document.querySelector(".tab2");
-// const tab3 = document.querySelector(".tab3");
-// const simpleBookingTab = document.getElementById("simple-bookmarking");
-// const speedySearchTab = document.getElementById("speedy-searching");
-// const easySharingTab = document.getElementById("easy-sharing");
-
-// tab1.addEventListener("click", () => {
-// 	tab1.classList.add("active");
-// 	tab2.classList.remove("active");
-// 	tab3.classList.remove("active");
-// 	simpleBookingTab.classList.toggle("show");
-// 	speedySearchTab.classList.toggle("show");
-// 	easySharingTab.classList.toggle("show");
-// });
-
-// tab2.addEventListener("click", () => {
-// 	tab2.classList.add("active");
-// 	tab1.classList.remove("active");
-// 	tab3.classList.remove("active");
-// 	simpleBookingTab.classList.toggle("show");
-// 	speedySearchTab.classList.toggle("show");
-// 	easySharingTab.classList.toggle("show");
-// });
-
-// tab3.addEventListener("click", () => {
-// 	tab3.classList.add("active");
-// 	tab1.classList.remove("active");
-// 	tab3.classList.remove("active");
-// 	simpleBookingTab.classList.toggle("show");
-// 	speedySearchTab.classList.toggle("show");
-// 	easySharingTab.classList.toggle("show");
-// });
+// Select first tab
+tabsContainer.querySelector(".tab").click();
 
 hamburgerButton.addEventListener("click", () => {
 	mobileMenu.classList.toggle("open");

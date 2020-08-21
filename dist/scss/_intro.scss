@@ -76,7 +76,7 @@
 }
 
 // Media queries
-@media (max-width: 465px) {
+@include mobile {
 	.intro {
 		flex-direction: column-reverse;
 
@@ -101,7 +101,7 @@
 	}
 }
 
-@media (min-width: 466px) and (max-width: 768px) {
+@include tablet {
 	.intro {
 		flex-direction: column-reverse;
 		.buttons {
@@ -129,7 +129,7 @@
 	}
 }
 
-@media (min-width: 1200px) {
+@include desktop {
 	.intro {
 		.intro-image {
 			display: flex;

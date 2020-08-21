@@ -68,7 +68,7 @@
 }
 
 // Media queries
-@media (max-width: 465px) {
+@include mobile {
 	.nav-bar {
 		color: $white;
 		.nav {
