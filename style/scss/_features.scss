@@ -1,4 +1,6 @@
 .features {
+	margin-top: 100px;
+
 	h2 {
 		text-align: center;
 	}
@@ -99,14 +101,54 @@
 		.features-info {
 			width: auto;
 		}
-	}
-	.tabs {
-		flex-direction: column;
-	}
+		.tabs {
+			flex-direction: column;
 
-	.features-section {
-		img {
-			width: 100%;
+			.tab {
+				padding: 0;
+			}
+		}
+
+		.features-section {
+			.tab-content {
+				flex-direction: column;
+
+				.image {
+					display: flex;
+
+					img {
+						width: 80%;
+						right: 0;
+						left: 0;
+						margin: 0 auto;
+					}
+					.background {
+						height: 200px;
+						width: 350px;
+						right: 0;
+						left: 60px;
+						margin-right: 0;
+					}
+				}
+			}
+			.info {
+				width: auto;
+				margin: 0;
+				margin-top: 30px;
+
+				h2 {
+					text-align: center;
+				}
+
+				.info-text {
+					width: auto;
+					text-align: center;
+				}
+
+				.info-button {
+					margin: 0 auto;
+				}
+			}
 		}
 	}
 }

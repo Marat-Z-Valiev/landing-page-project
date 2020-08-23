@@ -21,6 +21,7 @@
 			border: none;
 			height: 60px;
 			width: 380px;
+			padding: 0;
 		}
 		.chrome {
 			@extend button;
@@ -81,7 +82,7 @@
 		flex-direction: column-reverse;
 
 		.buttons {
-			gap: 10px;
+			gap: 15px;
 		}
 
 		.intro-text {
