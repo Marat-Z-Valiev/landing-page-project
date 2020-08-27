@@ -42,3 +42,21 @@ closeButton.addEventListener("click", () => {
 	mobileMenu.classList.toggle("open");
 	logo.classList.toggle("hide");
 });
+
+// FAQ section
+const questions = document.querySelectorAll(".question-text");
+const questionsContainer = document.querySelector(".questions");
+const arrows = document.querySelectorAll(".answer");
+
+questions.forEach((question) => {
+	question.addEventListener("click", () => {
+		const questionNumber = question.dataset.question;
+		const answerToShow = questionsContainer.querySelector(
+			`.answer[data-answer="${questionNumber}"]`
+		);
+
+		question.querySelector(".arrow").classList.toggle("rotate");
+
+		answerToShow.classList.toggle("open-question");
+	});
+});

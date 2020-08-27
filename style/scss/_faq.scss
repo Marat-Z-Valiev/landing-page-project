@@ -1,0 +1,122 @@
+.faq-section {
+	margin-top: 100px;
+
+	h2 {
+		text-align: center;
+	}
+
+	.faq-info {
+		text-align: center;
+		width: 500px;
+		margin: 0 auto;
+	}
+
+	.questions {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.question {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: column;
+			position: relative;
+			width: 540px;
+			border-top: solid 1px $grayishBlue;
+			border-bottom: solid 1px $grayishBlue;
+
+			.question-text {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				width: inherit;
+
+				&:hover {
+					cursor: pointer;
+					color: $softRed;
+				}
+
+				p {
+					font-weight: 600;
+				}
+
+				.arrow {
+					transform: rotate(0deg);
+					transition: transform 0.3s ease-out;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+				.rotate {
+					transform: rotate(180deg);
+					transition: transform 0.3s ease-out;
+					filter: invert(46%) sepia(99%) saturate(1218%) hue-rotate(327deg)
+						brightness(101%) contrast(96%);
+				}
+			}
+		}
+
+		.question:first-child {
+			margin-top: 50px;
+		}
+
+		.answer {
+			width: 540px;
+		}
+
+		.answer {
+			visibility: hidden;
+			transform: translateY(-60px);
+			opacity: 0;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			transition: all 0.3s ease-out 0s, transform 0.3s ease-out,
+				visibility 0.3s ease-out;
+		}
+
+		.open-question {
+			position: relative;
+			visibility: visible;
+			transform: translateY(0);
+			opacity: 1;
+		}
+
+		.info-button {
+			font-size: 1rem;
+			font-weight: 600;
+			border-radius: 5px;
+			border: none;
+			height: 50px;
+			width: 120px;
+			margin-top: 50px;
+			background-color: $softBlue;
+			color: $white;
+
+			&:hover {
+				background-color: transparent;
+				color: $softBlue;
+				cursor: pointer;
+				border: $softBlue 2px solid;
+			}
+		}
+	}
+}
+
+@include mobile {
+	.faq-section {
+		.faq-info {
+			width: auto;
+		}
+
+		.questions {
+			.question {
+				width: 350px;
+			}
+		}
+	}
+}
