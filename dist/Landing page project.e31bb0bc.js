@@ -161,6 +161,40 @@ questions.forEach(function (question) {
     question.querySelector(".arrow").classList.toggle("rotate");
     answerToShow.classList.toggle("open-question");
   });
+}); // Email validation
+
+var input = document.getElementById("email-input");
+var submitButton = document.querySelector(".submit");
+var errorIcon = document.querySelector(".error-icon");
+var successMessage = document.querySelector(".success");
+var errorMessage = document.querySelector(".error");
+input.addEventListener("focus", function () {
+  input.placeholder = "";
+});
+input.addEventListener("focusout", function () {
+  input.placeholder = "Enter you email address";
+});
+
+var validateEmail = function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};
+
+submitButton.addEventListener("click", function () {
+  var value = input.value;
+
+  if (validateEmail(value)) {
+    successMessage.style.display = "flex";
+    errorMessage.style.display = "none";
+    errorIcon.style.display = "none";
+    input.classList.remove("red-border");
+    input.value = "";
+  } else {
+    errorMessage.style.display = "flex";
+    errorIcon.style.display = "block";
+    successMessage.style.display = "none";
+    input.classList.add("red-border");
+  }
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -190,7 +224,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53775" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56811" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

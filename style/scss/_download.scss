@@ -83,10 +83,15 @@
 	.download-section {
 		.download-info {
 			width: auto;
+			padding: 30px;
 		}
 		.browsers {
 			flex-direction: column;
 			align-items: center;
+
+			.opera {
+				margin-top: 50px;
+			}
 		}
 	}
 }

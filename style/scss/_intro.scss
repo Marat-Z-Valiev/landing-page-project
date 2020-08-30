@@ -1,13 +1,12 @@
 .intro {
 	display: flex;
-	padding: 50px;
 
 	.intro-text {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
 		max-width: 500px;
-		margin-right: 210px;
+		text-align: center;
+		margin-left: 30px;
 	}
 
 	.buttons {
@@ -17,11 +16,12 @@
 		button {
 			font-size: 1rem;
 			font-weight: 600;
-			border-radius: 10px;
+			border-radius: 5px;
 			border: none;
 			height: 60px;
 			width: 380px;
 			padding: 0;
+			box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.75);
 		}
 		.chrome {
 			@extend button;
@@ -59,7 +59,6 @@
 		img {
 			position: absolute;
 			bottom: 60px;
-			right: 20px;
 			z-index: 5;
 		}
 
@@ -70,7 +69,6 @@
 			height: 400px;
 			width: 550px;
 			border-radius: 136px 0 0 200px;
-			margin-right: -55px;
 			margin-top: 50px;
 		}
 	}
@@ -83,21 +81,33 @@
 
 		.buttons {
 			gap: 15px;
+
+			button {
+				width: 450px;
+			}
 		}
 
 		.intro-text {
-			margin-right: 0;
+			margin-left: 0;
+			margin-top: 50px;
+			padding: 30px;
 		}
-		.intro-image .background {
-			height: 200px;
-			right: 0;
-			left: 60px;
-			margin-right: 0;
-		}
-		.intro-image img {
-			width: 120%;
-			bottom: 40px;
-			right: 0;
+
+		.intro-image {
+			top: 100px;
+
+			.background {
+				height: 200px;
+				width: 350px;
+				right: 0;
+				left: 30px;
+				margin-right: 0;
+			}
+			img {
+				width: 100%;
+				bottom: 40px;
+				right: 0;
+			}
 		}
 	}
 }

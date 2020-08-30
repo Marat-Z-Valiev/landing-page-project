@@ -40,14 +40,15 @@
 			.image {
 				img {
 					position: absolute;
-					left: 155px;
+					left: 130px;
 					z-index: 5;
 				}
 				.background {
+					position: relative;
 					background-color: $softBlue;
 					height: 400px;
 					width: 550px;
-					border-radius: 0 136px 200px 0;
+					border-radius: 0 405px 200px 0;
 					margin-top: 50px;
 				}
 			}
@@ -77,6 +78,7 @@
 				width: 120px;
 				background-color: $softBlue;
 				color: $white;
+				box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.75);
 
 				&:hover {
 					background-color: transparent;
@@ -100,9 +102,15 @@
 	.features {
 		.features-info {
 			width: auto;
+			padding: 30px;
 		}
 		.tabs {
 			flex-direction: column;
+			padding: 30px;
+
+			.tab:first-child {
+				border-top: solid 2px $grayishBlue;
+			}
 
 			.tab {
 				padding: 0;
@@ -115,6 +123,8 @@
 
 				.image {
 					display: flex;
+					justify-content: center;
+					width: 100%;
 
 					img {
 						width: 80%;
@@ -125,8 +135,7 @@
 					.background {
 						height: 200px;
 						width: 350px;
-						right: 0;
-						left: 60px;
+						right: 60px;
 						margin-right: 0;
 					}
 				}
@@ -143,6 +152,7 @@
 				.info-text {
 					width: auto;
 					text-align: center;
+					padding: 30px;
 				}
 
 				.info-button {
