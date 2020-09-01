@@ -33,6 +33,7 @@ tabs.forEach((tab) => {
 // Select first tab
 tabsContainer.querySelector(".tab").click();
 
+// Mobile menu
 hamburgerButton.addEventListener("click", () => {
 	mobileMenu.classList.toggle("open");
 	logo.classList.toggle("hide");

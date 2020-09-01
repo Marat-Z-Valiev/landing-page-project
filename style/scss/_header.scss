@@ -38,6 +38,11 @@
 				align-items: center;
 				margin-left: 50px;
 
+				a {
+					text-decoration: none;
+					color: $grayishBlue;
+				}
+
 				hr {
 					display: none;
 				}
@@ -132,6 +137,10 @@
 					li {
 						font-size: 1.5rem;
 						letter-spacing: 2px;
+					}
+
+					a {
+						color: $white;
 					}
 
 					hr {

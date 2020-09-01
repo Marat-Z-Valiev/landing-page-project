@@ -141,7 +141,8 @@ tabs.forEach(function (tab) {
   });
 }); // Select first tab
 
-tabsContainer.querySelector(".tab").click();
+tabsContainer.querySelector(".tab").click(); // Mobile menu
+
 hamburgerButton.addEventListener("click", function () {
   mobileMenu.classList.toggle("open");
   logo.classList.toggle("hide");
@@ -224,7 +225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64672" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53851" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
